@@ -1,0 +1,11 @@
+<h1>hoge 一覧</h1>
+
+<% @hoges.each do |h| %>
+  <p><%= h.id %>, <%= h.name %></p>
+<% end %>
+<h1>foo 一覧</h1>
+<% @foos.each do |f| %>
+  <p><%= f.id %>, <%= f.name %></p>
+<% end %>
+
+<%= link_to '登録', new_form_path %>

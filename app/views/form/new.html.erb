@@ -1,0 +1,16 @@
+<%= form_for @hoge, url: form_index_path do |f| %>
+  <p>
+    hoge:
+    <%= f.label 'name' %>
+    <%= f.text_field :name %>
+  </p>
+
+  <%= f.fields_for :foos do |foo| %>
+    <p>
+      foo:
+      <%= foo.label 'name' %>
+      <%= foo.text_field :name %>
+    </p>
+  <% end %>
+  <%= f.submit '登録' %>
+<% end %>
